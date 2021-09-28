@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat {
+        name;
+        weight;
+        speed;
+        live;
+        soud;
+
+        constructor(name, tc, live) {
+            this.name = name;
+            this.weight = 100;
+            this.speed = tc;
+            this.live = live
+        }
+
+        sounding(abc) {
+            this.soud = abc
+            document.write(this.name + ' : ' + this.soud)
+        }
+    }
+
+    class Cat {
+        name;
+        weight;
+        speedMax;
+        soud;
+
+        constructor(name) {
+            this.name = name;
+            this.weight = 200;
+            this.speedMax = 30;
+        }
+
+        sounding(abc) {
+            this.soud = abc
+            document.write(this.name + ' : ' + this.soud+'<br>')
+        }
+
+        mouse(rat) {
+            if (this.speedMax > rat.speed) {
+                document.write('mèo đã bắt đc chuột <br>')
+
+            } else{
+                document.write('chạy k kịp ;ăn cái gì')
+
+            }
+
+        }
+
+        eating(rat) {
+            if (rat.live = true) {
+                this.weight += rat.weight
+                document.write('mèo đã chén xong em này <br> mèo ' + this.weight + 'cân')
+            }else document.write('chịu chả ăn nổi')
+        }
+        display(rat){
+            this.mouse(rat)
+            this.eating(rat)
+            this.mouse()
+            this.eating()
+        }
+    }
+
+    let jerry = new Rat('jerry', 10, true)
+    let bigMon = new Rat('chị đại', 100000000000, )
+    let tom=new Cat('tom');
+    tom.display(jerry)
+    tom.sounding('bịp')
+
+</script>
+</body>
+</html>
